@@ -3,17 +3,16 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Nothing to install in this simple build."
-      - mkdir testforlder
-      - ls
+      - sudo yum install git
 
   pre_build:
     commands:
-      - echo "Preparing for build."
+      - git --version
+      - git clone https://github.com/accawsdevops/25novCodeBuild.git
 
   build:
     commands:
-      - echo "Building project... (In this case, no build is needed for static HTML)."
+      - git branch
 
   post_build:
     commands:
